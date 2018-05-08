@@ -11,32 +11,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/image/touch/apple-touch-icon-144x144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/image/touch/apple-touch-icon-114x114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/image/touch/apple-touch-icon-72x72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="/image/touch/apple-touch-icon-57x57-precomposed.png">
-        <link rel="shortcut icon" href="/image/favicon.ico">		<!--/ END META SECTION -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{URL::asset('/image/touch/apple-touch-icon-144x144-precomposed.png')}}">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{URL::asset('/image/touch/apple-touch-icon-114x114-precomposed.png')}}">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{URL::asset('/image/touch/apple-touch-icon-72x72-precomposed.png')}}">
+        <link rel="apple-touch-icon-precomposed" href="{{URL::asset('/image/touch/apple-touch-icon-57x57-precomposed.png')}}">
+        <link rel="shortcut icon" href="{{URL::asset('/image/favicon.ico')}}">
+        <!--/ END META SECTION -->
 
         <!-- START STYLESHEETS -->
         <!-- Plugins stylesheet : optional -->
-        <link rel="stylesheet" href="/plugins/selectize/css/selectize.css">
-        <link rel="stylesheet" href="/plugins/flot/css/flot.css">
         <!--/ Plugins stylesheet : optional -->
 
         <!-- Application stylesheet : mandatory -->
-        <link rel="stylesheet" href="/css/bootstrap.css">
-        <link rel="stylesheet" href="/css/layout.css">
-        <link rel="stylesheet" href="/css/uielement.css">
+        <link rel="stylesheet" href="{{URL::asset('/css/app.css')}}">
+        <link rel="stylesheet" href="{{URL::asset('/plugins/nprogress/nprogress.css')}}">
         <!--/ Application stylesheet -->
 
         <!-- Theme stylesheet -->
-        <link rel="stylesheet" href="/css/themes/theme.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-        <link href="/css/app.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{{URL::asset('/css/themes/theme.css')}}">
         <!--/ Theme stylesheet -->
 
         <!-- modernizr script -->
         <script type="text/javascript" src="/plugins/modernizr/js/modernizr.js"></script>
+
         <!--/ modernizr script -->
         <!-- END STYLESHEETS -->
         <style type="text/css">
@@ -65,9 +62,8 @@
             }
         </style>
     </head>
-    <body>
-        <div id="example">
-        </div>
-        <script src="/js/app.js" type="text/javascript"></script>
+    <body  id="main">
+    	<div id="app-container" ></div>
     </body>
+    <script type="text/javascript" src="/js/app.js"></script>
 </html>
